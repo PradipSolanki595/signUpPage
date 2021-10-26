@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/bg.svg);
+  overflow: auto;
+  padding-top: 60px;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main_wrapper{
+  padding: 4vh 3vw;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.form-control{
+  border-radius: 8px;
+  background-color: transparent;
+  border : 2px solid #0000000c;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  color: #212B27;
+  font-size : 1rem;
+  padding: 12px;
+  transition: 0.2s;
+    position:relative;
+}
+
+.form-control:hover{
+  border-radius: 8px;
+  background-color: transparent;
+  border : 2px solid #84C7AE;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 6px #c4c4c4;
+  transition: 0.2s;
+}
+
+label{
+  display: none;
+}
+
+div.form-check > label {
+  padding: 0px 0px 16px 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus + label, input:valid + label{
+  font-size: 12px;
+  color: #afbdcf;
+  top: -5px;
+  left:10px;
+  background: #ffffff;
+  padding: 0px 5px 0px 5px;
+}
+
+
+.signup_btn{
+  background-color:#84C7AE ;
+  color:#ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 16px 36px;
+  width: 60%;
+  border: none;
+}
+
+.login_btn{
+  background-color:#84C7AE ;
+  color:#ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 24px;
+  border: none;
+  width: 70%;
+}
+
+div.tab-content > form > h4{
+  padding-bottom: 16px;
+}
+
+
+.btn-primary:hover{
+  background-color:#118d53 ;
+}
+
+.card{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  position: relative;
+  width: 200px;
+  height: 32px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus + label, input:valid + label {
+  font-size: 12px;
+  color: #4a5a55;
+  top: -5px;
+  left: 10px;
+  background: #c7e6da ;
+  padding: 0px 5px 0px 5px;
+  border-radius: 8px;
+  margin-top: 12px;
+  transition: 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:hover + label{
+  background: #b8d4c9 ;
+  transition: 0.2s;
+}
+
+i{
+  margin: 0px 8px;
+}
+
+
+.profile_content{
+  width: 80vw;
+  height: 80vh;
 }
